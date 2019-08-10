@@ -1,0 +1,34 @@
+{"intents": [
+		{"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting. What's your name?"],
+         "context_set": "name"
+        },
+        {"tag": "name",
+         "patterns": ["my name is", "This"],
+         "responses": ["Nice to meet you. What do you want to buy?"],
+         "context_filter": "name",
+		 "context_set": "lastname"
+        },
+        {"tag": "buy",
+         "patterns": ["Can we buy some food?", "I'd like", "I would like", "How does this work?", "I want" ],
+         "responses": ["Are you looking to buy here or in place?"],
+         "context_set": "rentalday"
+        },
+        {"tag": "payments",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+         "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"],
+		 "context_set": "payment"
+        },
+		{"tag": "cost",
+         "patterns": ["How much is that?", "How much", "cost"],
+         "responses": ["It costs "],
+		 "context_set": "cost"
+        },
+		{"tag": "comment",
+         "patterns": ["it's a great job", "comment", "good", "bad"],
+         "responses": ["Thank you, you order is ready!!"],
+		 "context_set": "comments"
+        }
+   ]
+}
